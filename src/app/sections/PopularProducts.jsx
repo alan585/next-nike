@@ -1,5 +1,5 @@
-import PopularProductCard from "../components/PopularProductCard";
-import { products } from "../constants";
+import { PopularProductCard } from "@/components";
+import { products } from "@/constants";
 
 function PopularProducts() {
   return (

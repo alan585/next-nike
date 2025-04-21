@@ -1,6 +1,7 @@
-import { headerLogo } from "../assets/images";
-import { navLinks } from "../constants";
-import { hamburger } from "../assets/icons";
+"use client";
+
+import Image from "next/image";
+import { navLinks } from "@/constants";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
@@ -12,8 +13,8 @@ const Nav = () => {
       <nav className="max-container flex items-center justify-between">
         <div className="py-1">
           <a href="/">
-            <img
-              src={headerLogo}
+            <Image
+              src="/assets/images/header-logo.svg"
               alt="Logo"
               width={129}
               height={29}
@@ -41,7 +42,7 @@ const Nav = () => {
             className="rounded-full px-2 py-2 hover:bg-gray-200"
             onClick={() => setIsOpen(true)}
           >
-            <img src={hamburger} width={20} height={20} />
+            <Image src="/assets/icons/hamburger.svg" width={20} height={20} />
           </button>
           <Dialog
             open={isOpen}

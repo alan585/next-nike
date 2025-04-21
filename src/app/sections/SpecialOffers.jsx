@@ -1,13 +1,12 @@
-import { offer } from "../assets/images";
-import { arrowRight } from "../assets/icons";
-import { Button } from "../components";
+import { Button } from "@/components";
+import Image from "next/image";
 
 function SpecialOffers() {
   return (
     <section className="max-container flex items-center justify-between gap-10 max-xl:flex-col-reverse">
       <div className="flex-1">
-        <img
-          src={offer}
+        <Image
+          src="/assets/images/offer.svg"
           alt="special_offer"
           width={773}
           height={687}
@@ -29,7 +28,10 @@ function SpecialOffers() {
           nothing short of exceptional.
         </p>
         <div className="mt-11 flex gap-4">
-          <Button label="Shop now" iconURL={arrowRight}></Button>
+          <Button
+            label="Shop now"
+            iconURL="/assets/icons/arrow-right.svg"
+          ></Button>
           <Button
             label="Learn more"
             backgroundColor="bg-white"

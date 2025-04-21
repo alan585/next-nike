@@ -1,14 +1,13 @@
-import { footerLogo } from "../assets/images";
-import { footerLinks, socialMedia } from "../../constants";
-import { copyrightSign } from "../assets/icons";
+import Image from "next/image";
+import { footerLinks, socialMedia } from "@/constants";
 
 function Footer() {
   return (
     <footer className="max-container">
       <div className="flex flex-wrap items-start justify-between gap-20 max-lg:flex-col">
         <div className="flex flex-col items-start gap-6">
-          <img
-            src={footerLogo}
+          <Image
+            src="/assets/images/footer-logo.svg"
             alt="Nike Logo"
             className="m-0 h-[46px] w-[150px]"
           />
@@ -51,7 +50,7 @@ function Footer() {
 
       <div className="mt-24 flex justify-between max-sm:flex-col max-sm:items-center">
         <div className="flex items-center justify-start gap-2">
-          <img src={copyrightSign} />
+          <Image src="/assets/icons/copyright-sign.svg" alt="copyright sign" />
           <p className="font-montserrat text-white-400">
             {" "}
             Copyright. All rights reserved.

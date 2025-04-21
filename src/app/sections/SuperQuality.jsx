@@ -1,5 +1,5 @@
-import { Button } from "../components";
-import { shoe8 } from "../assets/images";
+import { Button } from "@/components";
+import Image from "next/image";
 
 function SuperQuality() {
   return (
@@ -25,13 +25,13 @@ function SuperQuality() {
         </div>
       </div>
       <div className="flex flex-1 items-center justify-center">
-        <img
-          src={shoe8}
+        <Image
+          src="/assets/images/shoe8.svg"
           alt="shoe"
           width={570}
           height={522}
           className="object-contain"
-        ></img>
+        ></Image>
       </div>
     </section>
   );

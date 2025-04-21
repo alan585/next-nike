@@ -1,8 +1,9 @@
-import Button from "../../components/Button";
-import { arrowRight } from "../assets/icons";
-import { shoes, statistics } from "../../constants";
-import { bigShoe1 } from "../assets/images";
-import ShoeCard from "../../components/ShoeCard";
+"use client";
+
+import { Button } from "@/components";
+import { shoes, statistics } from "@/constants";
+import bigShoe1 from "@assets/images/big-shoe1.png";
+import { ShoeCard } from "@/components";
 import { useState } from "react";
 
 function Hero() {
@@ -30,7 +31,7 @@ function Hero() {
           your active life.
         </p>
 
-        <Button label="Shop now" iconURL={arrowRight} />
+        <Button label="Shop now" iconURL="/assets/icons/arrow-right.svg" />
 
         <div className="mt-20 flex w-full flex-wrap items-start justify-start gap-16">
           {statistics.map((stat, index) => (
