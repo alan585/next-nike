@@ -9,6 +9,8 @@ function Footer() {
           <Image
             src="/assets/images/footer-logo.svg"
             alt="Nike Logo"
+            width={150}
+            height={46}
             className="m-0 h-[46px] w-[150px]"
           />
           <p className="font-montserrat text-base leading-7 text-white-400 sm:max-w-sm">
@@ -50,7 +52,12 @@ function Footer() {
 
       <div className="mt-24 flex justify-between max-sm:flex-col max-sm:items-center">
         <div className="flex items-center justify-start gap-2">
-          <Image src="/assets/icons/copyright-sign.svg" alt="copyright sign" />
+          <Image
+            src="/assets/icons/copyright-sign.svg"
+            alt="copyright sign"
+            width={20}
+            height={20}
+          />
           <p className="font-montserrat text-white-400">
             {" "}
             Copyright. All rights reserved.
