@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Image from "next/image";
 
 const Button = ({
   label,
@@ -10,7 +11,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`flex items-center justify-center gap-2 rounded-full border px-7 py-4 font-montserrat text-lg leading-none hover:brightness-90 ${
+      className={`font-montserrat flex items-center justify-center gap-2 rounded-full border px-7 py-4 text-lg leading-none hover:brightness-90 ${
         backgroundColor
           ? `${backgroundColor} ${textColor} ${borderColor}`
           : "border-coral-red bg-coral-red text-white"
@@ -18,9 +19,11 @@ const Button = ({
     >
       {label}
       {iconURL && (
-        <img
+        <Image
           src={iconURL}
           alt="arrow right icon"
+          width={20}
+          height={20}
           className="ml-2 h-5 w-5 rounded-full bg-white"
         />
       )}

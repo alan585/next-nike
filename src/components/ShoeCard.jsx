@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Image from "next/image";
 
 const ShoeCard = ({ imgURL, setBigShoeImg, bigShoeImg }) => {
   const handleClick = () => {
@@ -16,8 +17,8 @@ const ShoeCard = ({ imgURL, setBigShoeImg, bigShoeImg }) => {
           : "border-transparent"
       }`}
     >
-      <div className="flex items-center justify-center rounded-xl bg-card bg-cover bg-center max-sm:p-4 sm:h-40 sm:w-40">
-        <img
+      <div className="bg-card flex items-center justify-center rounded-xl bg-cover bg-center max-sm:p-4 sm:h-40 sm:w-40">
+        <Image
           src={imgURL.bigShoe}
           alt="shoe collection"
           width={127}

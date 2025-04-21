@@ -23,7 +23,7 @@ function Footer() {
                 key={media.alt}
                 className="flex h-12 w-12 items-center justify-center rounded-full bg-white"
               >
-                <img src={media.src} alt={media.alt} width={24} height={24} />
+                <Image src={media.src} alt={media.alt} width={24} height={24} />
               </div>
             ))}
           </div>
