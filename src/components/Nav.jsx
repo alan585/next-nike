@@ -32,7 +32,7 @@ const Nav = () => {
             </li>
           ))}
         </ul>
-        <div className="flex gap-2 font-montserrat text-lg font-medium leading-normal hover:text-gray-400 max-lg:hidden wide:mr-24">
+        <div className="font-montserrat wide:mr-24 flex gap-2 text-lg font-medium leading-normal hover:text-gray-400 max-lg:hidden">
           <a href="/">Sign in</a>
           <span>/</span>
           <a href="/">Explore now</a>
@@ -42,7 +42,12 @@ const Nav = () => {
             className="rounded-full px-2 py-2 hover:bg-gray-200"
             onClick={() => setIsOpen(true)}
           >
-            <Image src="/assets/icons/hamburger.svg" width={20} height={20} />
+            <Image
+              src="/assets/icons/hamburger.svg"
+              alt="menu"
+              width={20}
+              height={20}
+            />
           </button>
           <Dialog
             open={isOpen}
@@ -67,7 +72,7 @@ const Nav = () => {
                   <div key={item.id} className="py-1 pr-5">
                     <a
                       href={item.href}
-                      className="inline-flex w-full items-center justify-between py-3 pl-10 font-montserrat text-2xl font-medium text-gray-950 hover:text-gray-500 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                      className="font-montserrat inline-flex w-full items-center justify-between py-3 pl-10 text-2xl font-medium text-gray-950 hover:text-gray-500 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                     >
                       {item.label}
                       <svg
