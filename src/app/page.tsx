@@ -8,7 +8,7 @@ import CustomerReviews from "./sections/CustomerReviews";
 import Subscribe from "./sections/Subscribe";
 import Footer from "./sections/Footer";
 
-const App = () => (
+const Home = () => (
   <main className="relative">
     <Nav />
     <section className="xl:padding-l wide:padding-r padding-b">
@@ -38,4 +38,4 @@ const App = () => (
   </main>
 );
 
-export default App;
+export default Home;

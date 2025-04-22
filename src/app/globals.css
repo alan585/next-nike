@@ -2,12 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
 
 @import "tailwindcss";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
 }
 
 @theme {
@@ -32,8 +33,8 @@
 
   --shadow-3xl: 0px 10px 40px rgba(0, 0, 0, 0.1);
 
-  --hero-bg: url("assets/images/collection-background.svg");
-  --card-bg: url("assets/images/thumbnail-background.svg");
+  --background-image-hero: url("/assets/images/collection-background.svg");
+  --background-image-card: url("/assets/images/thumbnail-background.svg");
 
   --breakpoint-wide: 1440px;
 }
@@ -45,40 +46,38 @@
   }
 
   .input {
-    @apply border pl-5 text-base leading-normal text-slate-gray outline-none max-sm:w-full max-sm:rounded-full max-sm:border-slate-gray max-sm:p-5 sm:flex-1 sm:border-none;
+    @apply text-slate-gray max-sm:border-slate-gray border pl-5 text-base leading-normal outline-none max-sm:w-full max-sm:rounded-full max-sm:p-5 sm:flex-1 sm:border-none;
   }
 }
 
-@layer utilities {
-  .padding {
-    @apply px-8 py-12 sm:px-16 sm:py-24;
-  }
+@utility padding {
+  @apply px-8 py-12 sm:px-16 sm:py-24;
+}
 
-  .padding-x {
-    @apply px-8 sm:px-16;
-  }
+@utility padding-x {
+  @apply px-8 sm:px-16;
+}
 
-  .padding-y {
-    @apply py-12 sm:py-24;
-  }
+@utility padding-y {
+  @apply py-12 sm:py-24;
+}
 
-  .padding-l {
-    @apply pl-8 sm:pl-16;
-  }
+@utility padding-l {
+  @apply pl-8 sm:pl-16;
+}
 
-  .padding-r {
-    @apply pr-8 sm:pr-16;
-  }
+@utility padding-r {
+  @apply pr-8 sm:pr-16;
+}
 
-  .padding-t {
-    @apply pt-12 sm:pt-24;
-  }
+@utility padding-t {
+  @apply pt-12 sm:pt-24;
+}
 
-  .padding-b {
-    @apply pb-12 sm:pb-24;
-  }
+@utility padding-b {
+  @apply pb-12 sm:pb-24;
+}
 
-  .info-text {
-    @apply font-montserrat text-lg leading-7 text-slate-gray;
-  }
+@utility info-text {
+  @apply font-montserrat text-slate-gray text-lg leading-7;
 }
